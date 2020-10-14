@@ -26,3 +26,13 @@ And then
 ```
 shareclip
 ```
+
+## For android
+
+- [Download termux](https://play.google.com/store/apps/details?id=com.termux)
+- Run   
+```
+apt update -y && apt install termux-api nodejs -y
+```
+
+- Follow instructions under **Running**
