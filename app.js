@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const monitor = require('clipboard-monitor')()
 const clipboardy = require('clipboardy')
 
