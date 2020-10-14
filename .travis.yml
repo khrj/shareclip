@@ -1,0 +1,17 @@
+language: node_js
+dist: bionic
+node_js: node
+os: linux
+
+script: pkg .
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file:
+      - "shareclip-win.exe"
+      - "shareclip-macos"
+      - "shareclip-linux"
+  skip_cleanup: true
+  on:
+    tags: true
