@@ -11,7 +11,7 @@ const listenServer = _ => {
     server.listen(process.env.PORT || 0, _ => {
         let port = process.env.PORT || server.address().port
         console.log(`Listening on port ${port}`)
-        console.log(`Run "shareclip ${require('ip').address()}:${port}" on a different device`)
+        console.log(`Run "shareclip http://${require('ip').address()}:${port}" on a different device`)
     })
 
     io.on('connection', socket => {
@@ -35,8 +35,6 @@ const connectClient = _ => {
     } catch {
         throw "Invalid server address"
     }
-
-    console.log(process.argv[2])
 
     socket.on('connect', _ => {
         console.log(`Connected to ${process.argv[2]}`)
