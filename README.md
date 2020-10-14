@@ -1,14 +1,22 @@
 # Shareclip
 
-## Credits
+## Downloads
 
-- Inspired by [Quackduck's Uniclip](https://github.com/quackduck/uniclip)
-- Original idea by [Aaryan Porwal](https://github.com/aaryanporwal)
+Downloads are at [releases](https://github.com/KhushrajRathod/shareclip/releases)
 
 ## Running
 
 Run
+```
+npm install -g shareclip
+```
 
+And then
 ```
-node app.js
+shareclip
 ```
+
+## Credits
+
+- Inspired by [Quackduck's Uniclip](https://github.com/quackduck/uniclip)
+- Original idea by [Aaryan Porwal](https://github.com/aaryanporwal)
