@@ -1,3 +1,8 @@
+# Build
+shareclip-macos
+shareclip-win.exe
+shareclip-linux
+
 # Logs
 logs
 *.log

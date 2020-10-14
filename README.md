@@ -4,6 +4,12 @@
 
 Downloads are at [releases](https://github.com/KhushrajRathod/shareclip/releases)
 
+Run
+
+```
+shareclip-[os]
+```
+
 ## Running
 
 Run

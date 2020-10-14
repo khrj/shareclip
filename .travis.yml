@@ -3,7 +3,9 @@ dist: bionic
 node_js: node
 os: linux
 
-script: pkg .
+script:
+  - npm install -g pkg
+  - pkg .
 
 deploy:
   provider: releases
