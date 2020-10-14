@@ -8,7 +8,9 @@ const listenServer = _ => {
     const io = require("socket.io")(server)
     
     server.listen(process.env.PORT || 0, _ => {
-        console.log(`Listening on port ${process.env.PORT || server.address().port}`)
+        let port = process.env.PORT || server.address().port
+        console.log(`Listening on port ${port}`)
+        console.log(`Run "shareclip ${require('ip').address()}:${port}" on a different device`)
     })
 
     io.on('connection', socket => {
@@ -58,6 +60,6 @@ try {
     }
 } catch (e) {
     console.log(e)
-    console.log(`Usage: ${process.argv[0]} ${process.argv[1]} [server-address if running as client]`)
+    console.log(`Usage: shareclip [server-address if running as client]`)
     process.exit(1)
 }
