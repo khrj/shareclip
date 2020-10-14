@@ -1,4 +1,4 @@
-# Node Shared Clipboard
+# Shareclip
 
 ## Credits
 
