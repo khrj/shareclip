@@ -2,18 +2,18 @@
 
 Shareclip shares your clipboard across multiple devices. Copy on your phone and paste on your desktop!
 
-- Node.js port of [Quackduck's Uniclip](https://github.com/quackduck/uniclip)
-- Original idea by [Aaryan Porwal](https://github.com/aaryanporwal)
+Thanks to:
+- [Ishan Goel](https://github.com/quackduck/), this is a node.js rewrite of [uniclip](https://github.com/quackduck/uniclip)
+- [Aaryan Porwal](https://github.com/aaryanporwal), this was his idea originally
 
-## Specific instructions for Android
+## Quickstart
 
-- [Download termux](https://play.google.com/store/apps/details?id=com.termux)
-- Run   
+Requires [node.js](https://nodejs.org/en/) to be installed.
+Run:
+
 ```
-apt update -y && apt install termux-api nodejs -y
+npx shareclip
 ```
-
-- Follow instructions under **Running**
 
 ## Downloads
 
@@ -29,7 +29,7 @@ shareclip-[os]
 
 Didn't understand? Install [the latest node.js](https://nodejs.org/en/) and follow the instructions under **Running**
 
-## Running
+## Installing
 
 Run
 ```
@@ -55,3 +55,13 @@ Run "shareclip http://192.168.29.128:54979" on a different device
 > **WARNING: THE PANDAS ARE COMING**
 
 Run `shareclip http://192.168.29.128:54979` on another device where you have shareclip installed and enter. Your clipboard should be shared automatically between your devices now. Note that your devices must be under the same WiFi network.
+
+## Specific instructions for Android
+
+- [Download termux](https://play.google.com/store/apps/details?id=com.termux)
+- Run   
+```
+apt update -y && apt install termux-api nodejs -y
+```
+
+- Follow instructions under **Running**
