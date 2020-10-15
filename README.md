@@ -54,7 +54,7 @@ Run "shareclip http://192.168.29.128:54979" on a different device
 
 > **WARNING: THE PANDAS ARE COMING**
 
-Run `shareclip http://192.168.29.128:54979` on another device where you have shareclip installed and enter. Your clipboard should be shared automatically between your devices now. Note that your devices must be under the same WiFi network.
+Run the command provided (Here, it's `shareclip http://192.168.29.128:54979`) on another device where you have shareclip installed and enter. Your clipboard should be shared automatically between your devices now. Note that your devices must be under the same WiFi network.
 
 ## Specific instructions for Android
 
