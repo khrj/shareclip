@@ -27,9 +27,9 @@ Open your terminal, and run
 shareclip-[os]
 ```
 
-Didn't understand? Install [the latest node.js](https://nodejs.org/en/) and follow the instructions under **Running**
+Didn't understand / Doesn't work? Install [the latest node.js](https://nodejs.org/en/) and follow the instructions under **Quickstart** or **Installation**
 
-## Installing
+## Installation
 
 Run
 ```
@@ -64,4 +64,4 @@ Run the command provided (Here, it's `shareclip http://192.168.29.128:54979`) on
 apt update -y && apt install termux-api nodejs -y
 ```
 
-- Follow instructions under **Running**
+- Follow instructions under **Quickstart** or **Installation**
