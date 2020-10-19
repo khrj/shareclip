@@ -1,6 +1,15 @@
 #!/usr/bin/env node
-const monitor = require('clipboard-monitor')()
 const clipboardy = require('clipboardy')
+
+let clipboard
+let monitor = new (require('events')).EventEmitter()
+setInterval(async _ => {
+    let current = await clipboardy.read()
+    if (clipboard !== current) {
+        clipboard = current
+        monitor.emit('copy', current)
+    }
+}, 500)
 
 const listenServer = _ => {
     console.log("RUNNING AS SERVER\nWARNING: THE PANDAS ARE COMING")
@@ -15,15 +24,18 @@ const listenServer = _ => {
     })
 
     io.on('connection', socket => {
-        monitor.on('copy', data => {
-            console.log(`Copied: ${data}`)
-            socket.emit('copy', data)
-        })
         console.log(`Connected to ${socket.id}`)    
-        socket.on('copy', async data => {
+        socket.on('data', async data => {
             console.log(`Got data: ${data}`)
+            socket.broadcast.emit(data)
+            clipboard = data
             await clipboardy.write(data)
         })
+    })
+
+    monitor.on('copy', data => {
+        console.log(`Copied: ${data}`)
+        io.emit('data', data)
     })
 }
 
@@ -40,11 +52,13 @@ const connectClient = _ => {
         console.log(`Connected to ${process.argv[2]}`)
         monitor.on('copy', data => {
             console.log(`Copied: ${data}`)
-            socket.emit('copy', data)
+            socket.emit('data', data)
         })
     })
-    socket.on('copy', async data => {
-        console.log(`Got data: ${data}`) 
+
+    socket.on('data', async data => {
+        console.log(`Got data: ${data}`)
+        clipboard = data 
         await clipboardy.write(data)
     })
 }
