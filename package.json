@@ -1,6 +1,6 @@
 {
   "name": "shareclip",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "app.js",
   "repository": "https://github.com/KhushrajRathod/shareclip",
   "author": "Khushraj Rathod <khushraj.rathod@gmail.com>",
@@ -9,8 +9,8 @@
     "clipboardy": "^2.3.0",
     "express": "^4.17.1",
     "ip": "^1.1.5",
-    "socket.io": "^2.3.0",
-    "socket.io-client": "^2.3.1"
+    "socket.io": "^4.0.0",
+    "socket.io-client": "^4.0.0"
   },
   "bin": {
     "shareclip": "./app.js"
