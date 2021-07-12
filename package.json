@@ -2,7 +2,7 @@
   "name": "shareclip",
   "version": "1.1.0",
   "main": "app.js",
-  "repository": "https://github.com/KhushrajRathod/shareclip",
+  "repository": "https://github.com/khrj/shareclip",
   "author": "Khushraj Rathod <khushraj.rathod@gmail.com>",
   "license": "GPL-3.0",
   "dependencies": {

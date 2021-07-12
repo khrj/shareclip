@@ -19,7 +19,7 @@ npx shareclip
 
 Note: If you already have node.js installed (If you don't know what that is then probably not), then follow **Running** below instead of this.
 
-Downloads are at [releases](https://github.com/KhushrajRathod/shareclip/releases)
+Downloads are at [releases](https://github.com/khrj/shareclip/releases)
 
 Open your terminal, and run
 
